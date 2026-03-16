@@ -3,7 +3,8 @@ import { PredictionResponse, SearchResult, StockDataResponse } from "../types";
 
 // Use your machine's local IP so physical devices can reach the API.
 // For emulators: Android uses 10.0.2.2, iOS simulator uses localhost.
-const BASE_URL = "http://127.0.0.1:8000";
+// Android emulator uses 10.0.2.2 to reach host machine localhost
+const BASE_URL = "http://10.0.2.2:8000";
 
 const client = axios.create({ baseURL: BASE_URL, timeout: 15000 });
 
